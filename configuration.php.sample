@@ -1,6 +1,6 @@
 <?php
 // ** ClearDB settings - from Heroku Environment ** //
-$db = parse_url($_ENV["CLEARDB_DATABASE_URL"]); 
+$db = parse_url($_ENV["DATABASE_URL"]);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for Joomla */
@@ -27,7 +27,7 @@ class JConfig {
 	public $access = '1';
 	public $debug = '0';
 	public $debug_lang = '0';
-	public $dbtype = 'mysqli';
+	public $dbtype = 'pgsql';
 	public $host = DB_HOST;
 	public $user = DB_USER;
 	public $password = DB_PASSWORD;
